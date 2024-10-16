@@ -6,7 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		883253502CBF3CC4000D9A00 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8832534F2CBF3CC4000D9A00 /* UserNotifications.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		8832534F2CBF3CC4000D9A00 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		887C29942CB601AF008CBA1E /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,16 +41,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				883253502CBF3CC4000D9A00 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8832534E2CBF3CC4000D9A00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8832534F2CBF3CC4000D9A00 /* UserNotifications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		887C298B2CB601AF008CBA1E = {
 			isa = PBXGroup;
 			children = (
 				887C29962CB601AF008CBA1E /* Agenda */,
+				8832534E2CBF3CC4000D9A00 /* Frameworks */,
 				887C29952CB601AF008CBA1E /* Products */,
 			);
 			sourceTree = "<group>";

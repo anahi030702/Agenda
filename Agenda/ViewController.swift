@@ -20,6 +20,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         dpkFecha.minimumDate = Date().addingTimeInterval(3600)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! AgendaViewController
+        vc.nombre = txfNombre.text
+        vc.lugar = txfLugar.text
+        vc.fecha = dpkFecha.date
+        
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if txfNombre == textField{
