@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        //PARA PEDIR PERMISO DE NOTIFICACIONES, CONTACTOS, se puede poner en cualquier parte del codigo donde queramos nosotros pedir los permisos
         let noti = UNUserNotificationCenter.current()
         let permisos = UNAuthorizationOptions(arrayLiteral: [.alert, .sound, .badge ])
         noti.requestAuthorization(options: permisos) { respuesta, error in

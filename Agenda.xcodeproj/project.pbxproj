@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		883253502CBF3CC4000D9A00 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8832534F2CBF3CC4000D9A00 /* UserNotifications.framework */; };
+		889A94252CC0AA90006D612E /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889A94242CC0AA90006D612E /* EventKit.framework */; };
+		889A94272CC0B46F006D612E /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889A94262CC0B46F006D612E /* Contacts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8832534F2CBF3CC4000D9A00 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		887C29942CB601AF008CBA1E /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		889A94242CC0AA90006D612E /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		889A94262CC0B46F006D612E /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -41,7 +45,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889A94252CC0AA90006D612E /* EventKit.framework in Frameworks */,
 				883253502CBF3CC4000D9A00 /* UserNotifications.framework in Frameworks */,
+				889A94272CC0B46F006D612E /* Contacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +57,8 @@
 		8832534E2CBF3CC4000D9A00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				889A94262CC0B46F006D612E /* Contacts.framework */,
+				889A94242CC0AA90006D612E /* EventKit.framework */,
 				8832534F2CBF3CC4000D9A00 /* UserNotifications.framework */,
 			);
 			name = Frameworks;
@@ -168,6 +176,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -200,6 +209,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

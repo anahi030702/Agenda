@@ -17,9 +17,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //agrega la fecha actual como fecha minima para el date picker de la pantalla y que no se puedan elegir fechas o horas anteriores
         dpkFecha.minimumDate = Date().addingTimeInterval(3600)
     }
     
+    //con este metodo se manda los valores a la otra vista por medio del segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! AgendaViewController
         vc.nombre = txfNombre.text
