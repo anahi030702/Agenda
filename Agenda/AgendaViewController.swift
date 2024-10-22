@@ -156,8 +156,31 @@ class AgendaViewController: UIViewController {
         
         do{
             try guardarContacto.execute(peticion)
+            
+            //Muestra la alerta en la pantalla
+            let alerta = UIAlertController(title: "EXITO!", message: "Se agrego el contacto a la libreta de contactos del dispositivo", preferredStyle: .alert)
+            //hace el boton OK y por default ya hace que se quite la notificacion, si agregamos el handler podriamos decirle que queremos que haga el boton cuando lo presionen
+            let ok = UIAlertAction(title: "Aceptar", style: .default)
+            alerta.addAction(ok)
+            present(alerta, animated: true)
+            
         }catch{
-            print(error)
+            if error.localizedDescription == "Access Denied"{
+                //Muestra la alerta en la pantalla
+                let alerta = UIAlertController(title: "ERROR!", message: "Debes aceptar el permiso para guardar contactos, cambialo en la configuracion de la App", preferredStyle: .alert)
+                //hace el boton OK y por default ya hace que se quite la notificacion, si agregamos el handler podriamos decirle que queremos que haga el boton cuando lo presionen
+                let ok = UIAlertAction(title: "Aceptar", style: .default)
+                alerta.addAction(ok)
+                self.present(alerta, animated: true)
+                
+            }else{
+                //Muestra la alerta en la pantalla
+                let alerta = UIAlertController(title: "ERROR!", message: "Ocurrio un error al guardar el contacto, intentalo de nuevo", preferredStyle: .alert)
+                //hace el boton OK y por default ya hace que se quite la notificacion, si agregamos el handler podriamos decirle que queremos que haga el boton cuando lo presionen
+                let ok = UIAlertAction(title: "Aceptar", style: .default)
+                alerta.addAction(ok)
+                self.present(alerta, animated: true)
+            }
         }
     }
     
